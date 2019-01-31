@@ -1,0 +1,30 @@
+name: elasticsearch
+summary: Open Source, Distributed, RESTful, Search Engine built on Apache Lucene
+maintainer: Elasticsearch Charmers <elasticsearch-charmers@lists.launchpad.net>
+description: |
+  Distributed RESTful search and analytics
+  Read more at http://www.elasticsearch.org
+tags:
+  - misc
+subordinate: false
+series:
+  - bionic
+  - xenial
+  - trusty
+peers:
+  peer:
+    interface: http
+provides:
+  java:
+    interface: java
+    scope: container
+  client:
+    interface: elasticsearch
+  nrpe-external-master:
+     interface: nrpe-external-master
+     scope: container
+  logs:
+    interface: logs
+  data:
+    interface: block-storage
+    scope: container

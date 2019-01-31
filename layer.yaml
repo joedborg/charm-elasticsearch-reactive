@@ -1,0 +1,10 @@
+includes:
+  - 'layer:basic'
+  - 'layer:apt'
+  - 'interface:java'
+  - 'interface:elasticsearch'
+options:
+  apt:
+    packages:
+      - elasticsearch
+    full_version: True

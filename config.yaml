@@ -1,0 +1,40 @@
+options:
+  install_sources:
+    type: string
+    default: deb https://artifacts.elastic.co/packages/6.x/apt stable main
+    description: |
+      Apt repository to fetch Elasticsearch from
+  install_keys:
+    type: string
+    default: D88E42B4
+    description: |
+      Apt repository key
+  es-heap-size:
+    type: int
+    default: 3
+    description: |
+      Maximum and initial JVM heap size for Elasticsearch, in GB
+  gpg-key-id:
+    type: string
+    default: D88E42B4
+    description: |
+      Elasticsearch's GPG fingerprint to validate the apt key
+  gpg-key:
+    type: string
+    default: ""
+    description: |
+      ES repository key to use. This option can be used instead of
+      apt-key-url and gpg-key in environments where proxy servers
+      block access to apt-key-url.
+  cluster-name:
+    type: string
+    default: "elasticsearch"
+    description: |
+      This sets the elasticsearch cluster name.
+  firewall_enabled:
+    type: boolean
+    default: true
+    description: |
+      By default, the admin and peer ports (9200 and 9300) are only accessible
+      to clients and peers respectively. Switch this to false to enable access
+      from any machine.
